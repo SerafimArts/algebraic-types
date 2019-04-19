@@ -218,11 +218,14 @@ Because at the language level, type-hint assertions are executed in runtime,
 this does not prevent adding the ability to add runtime (anonymous functions):
 
 ```php
-type callableArray = array & fn(array $callable): bool => 
-    \count($callable) === 2 && \method_exists(...$callable);
+type callableArray = array & 
+    // Runtime assertion
+    fn(array $callable): bool => 
+        \count($callable) === 2 && \method_exists(...$callable);
 
-type callableString = string & fn(string $callable): bool => 
-    \function_exists($callable);
+type callableString = string & 
+    // Runtime assertion
+    fn(string $callable): bool => \function_exists($callable);
 
 type callable = \Closure | callableArray | callableString;
 ```

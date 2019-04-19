@@ -1,9 +1,9 @@
 
 # PHP RFC: Algebraic Types
 
-Date: 2019-04-19
-Author: Kirill Nesmeyanov (nesk@xakep.ru)
-Status: Draft
+  - Date: 2019-04-19
+  - Author: Kirill Nesmeyanov (nesk@xakep.ru)
+  - Status: Draft
 
 ## Introduction
 

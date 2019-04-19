@@ -153,20 +153,29 @@ TODO reconcile builtin types hierarchy:
 
 ```
 type mixed = [native code]; // "mixed" type-hint is an alias for type-hint absence
+
     type object = mixed & [native code];
-        type \stdClass = object & [native code "instance of"]
-    type scalar = mixed & [native code];
-        type string = scalar & [native code];
-        type int = scalar & [native code];
-        type float = scalar & [native code];
-        type bool = scalar & [native code];
-    type resource = mixed & [native code];
-    type array = mixed & [native code];
     
+        type \stdClass = object & [native code "instance of"]
+        
+    type scalar = mixed & [native code];
+    
+        type string = scalar & [native code];
+        
+        type int = scalar & [native code];
+        
+        type float = scalar & [native code];
+        
+        type bool = scalar & [native code];
+        
+    type resource = mixed & [native code];
+    
+    type array = mixed & [native code];
+```
+
 Note:
   - From right to left ( <- ) for arguments.
   - From left to right ( -> ) for return types.
-```
 
 ```php
 interface ParentInterface

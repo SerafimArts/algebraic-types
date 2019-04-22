@@ -100,6 +100,8 @@ class DatabaseUsersRepository extends Repository implements UsersRepositoryInter
 type DatabaseUsersRepository = Repository | UsersRepositoryInterface | object;
 ```
 
+The existence of traits does not affect the final type, since they have the ability to change their signatures while injecting into an class:
+
 ```php
 class Request implements RequestInterface
 {
@@ -112,7 +114,7 @@ class Request implements RequestInterface
 // Same as implicit type declaration:
 //
 
-type Request = RequestInterface | BodyTrait | CookiesTrait | HeadersTrait | object;
+type Request = RequestInterface | object;
 ```
 
 ### Namespace Influence
